@@ -95,7 +95,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-image: url('Ehsaan.jpg');
+  background-image: url('images/Ehsaan.jpg');
   background-size: 90%;
   background-position: center;
 }
@@ -193,7 +193,7 @@ body {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
-  background-image: url('ehsaan.png');
+  background-image: url('images/ehsaan.png');
   background-size: cover;
   background-position: center;
 }
@@ -436,11 +436,11 @@ body {
 }
 
 .project-image-1 {
-  background-image: url('pic.png');
+  background-image: url('images/pic.png');
 }
 
 .project-image-2 {
-  background-image: url('pic3.png');
+  background-image: url('images/pic3.png');
 }
 
 /* Experience & Education Timeline */
@@ -566,7 +566,7 @@ body {
 }
 
 .certificate-image-1 {
-  background-image: url('prompting.png');
+  background-image: url('images/prompting.png');
   position: relative;
 }
 
@@ -575,22 +575,22 @@ body {
   display: none;
 }
 #cert-image-2{
-  background-image: url('software.png');
+  background-image: url('images/software.png');
 }
 .certificate-image-2 {
   position: relative;
 }
 #cert-image-3{
-  background-image: url('ms.png');
+  background-image: url('images/ms.png');
 }
 #cert-image-4{
-  background-image: url('python.png');
+  background-image: url('images/python.png');
 }
 #cert-image-5{
-  background-image: url('html.png');
+  background-image: url('images/html.png');
 }
 #cert-image-6{
-  background-image: url('git.png');
+  background-image: url('images/git.png');
 }
 
 .certificate-image-2::before {
