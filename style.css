@@ -447,6 +447,24 @@ body {
   background-image: url('images/Dashboard.png');
 }
 
+/* AquaTrack View Button - Remove borders and outlines */
+#view-aquatrack-btn {
+  border: none !important;
+}
+
+#view-aquatrack-btn:focus,
+#view-aquatrack-btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#view-aquatrack-btn:hover {
+  outline: none !important;
+  border: none !important;
+}
+
+
 /* Carousel Modal */
 .carousel-modal {
   position: fixed;
