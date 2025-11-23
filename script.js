@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             if (mobileNavOverlay && mobileNavOverlay.classList.contains('open')) {
                 mobileNavOverlay.classList.remove('open');
             }
-            
+
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -59,35 +59,35 @@ document.addEventListener('DOMContentLoaded', function () {
 // Form submission handler
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(this);
         const name = this.querySelector('input[placeholder="Your Name"]').value;
         const email = this.querySelector('input[placeholder="Your Email"]').value;
         const message = this.querySelector('textarea[placeholder="Your Message"]').value;
-        
+
         // Basic validation
         if (!name.trim() || !email.trim() || !message.trim()) {
             alert('Please fill in all fields.');
             return;
         }
-        
+
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Please enter a valid email address.');
             return;
         }
-        
+
         // Simulate form submission
         const submitButton = this.querySelector('.submit-button');
         const originalText = submitButton.textContent;
-        
+
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
-        
+
         setTimeout(() => {
             alert('Thank you for your message! I\'ll get back to you soon.');
             this.reset();
@@ -98,7 +98,7 @@ if (contactForm) {
 }
 
 // Header background on scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.header-container');
     if (window.scrollY > 50) {
         header.style.backgroundColor = 'rgba(248, 250, 252, 0.98)';
@@ -127,7 +127,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Add fade-in animation to sections
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section, .hero-section');
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -138,16 +138,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add hover effects to cards
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.skill-card, .project-card, .certificate-card');
-    
+
     cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-8px)';
             this.style.boxShadow = '0 25px 80px rgba(2, 6, 23, 0.15)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0)';
             this.style.boxShadow = '0 8px 30px rgba(2, 6, 23, 0.08)';
         });
@@ -155,21 +155,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Active navigation highlight
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav-link');
-    
+
     let currentSection = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
-        
+
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             currentSection = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${currentSection}`) {
@@ -205,7 +205,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Parallax effect for hero section
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const heroImage = document.querySelector('.hero-image');
     if (heroImage) {
         const scrolled = window.scrollY;
@@ -215,11 +215,98 @@ window.addEventListener('scroll', function() {
 });
 
 // Loading animation
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.3s ease';
-    
+
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
+});
+
+// AquaTrack Carousel Functionality
+document.addEventListener('DOMContentLoaded', function () {
+    const viewButton = document.getElementById('view-aquatrack-btn');
+    const carouselModal = document.getElementById('carousel-modal');
+    const carouselImage = document.getElementById('carousel-image');
+    const carouselCounter = document.getElementById('carousel-counter');
+    const closeButton = document.getElementById('carousel-close');
+    const prevButton = document.getElementById('carousel-prev');
+    const nextButton = document.getElementById('carousel-next');
+
+    // Define the image array for AquaTrack project
+    const aquaTrackImages = [
+        'images/customers.png',
+        'images/Dashboard.png',
+        'images/Farmer.png',
+        'images/fishes.png',
+        'images/report.png',
+        'images/transactions.png'
+    ];
+
+    let currentImageIndex = 0;
+
+    // Function to update the displayed image
+    function updateImage() {
+        carouselImage.src = aquaTrackImages[currentImageIndex];
+        carouselCounter.textContent = `${currentImageIndex + 1} / ${aquaTrackImages.length}`;
+    }
+
+    // Open carousel modal
+    if (viewButton) {
+        viewButton.addEventListener('click', function () {
+            currentImageIndex = 0;
+            updateImage();
+            carouselModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Close carousel modal
+    function closeCarousel() {
+        carouselModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closeCarousel);
+    }
+
+    // Close when clicking outside the image
+    carouselModal.addEventListener('click', function (e) {
+        if (e.target === carouselModal) {
+            closeCarousel();
+        }
+    });
+
+    // Previous image
+    if (prevButton) {
+        prevButton.addEventListener('click', function () {
+            currentImageIndex = (currentImageIndex - 1 + aquaTrackImages.length) % aquaTrackImages.length;
+            updateImage();
+        });
+    }
+
+    // Next image
+    if (nextButton) {
+        nextButton.addEventListener('click', function () {
+            currentImageIndex = (currentImageIndex + 1) % aquaTrackImages.length;
+            updateImage();
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+        if (carouselModal.classList.contains('active')) {
+            if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + aquaTrackImages.length) % aquaTrackImages.length;
+                updateImage();
+            } else if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % aquaTrackImages.length;
+                updateImage();
+            } else if (e.key === 'Escape') {
+                closeCarousel();
+            }
+        }
+    });
 });
