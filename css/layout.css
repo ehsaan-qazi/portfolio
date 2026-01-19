@@ -20,13 +20,13 @@ body {
 }
 
 section {
-    padding: var(--space-10) 0;
+    padding: var(--space-8) 0;
     position: relative;
     background-color: transparent;
 }
 
 section:first-of-type {
-    padding-top: var(--space-9);
+    padding-top: var(--space-6);
 }
 
 /* All sections except hero inherit dark background */
