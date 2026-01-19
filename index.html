@@ -2,581 +2,548 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ehsaan Qazi | Software Engineer Portfolio</title>
-    <meta name="description"
-        content="Portfolio of Mohammad Ehsaan ur Rehman Qazi (Ehsaan Qazi), Software Engineering student at COMSATS University Islamabad. Skilled in Front end development, web development, Prompt Engineering, Search Engine Optimizartion (SEO), E-commerence and Software Engineering">
-    <meta name="keywords"
-        content="Mohammmad Ehsaan ur Rehman Qazi, Ehsaan qazi, software engineer, portfolio, web development, app development, Python, JavaScript, C++, COMSATS University, PowerPoint design, Prompt Engineer">
-    <meta name="author" content="Mohammad Ehsaan ur Rehman Qazi">
-    <meta property="og:title" content="Ehsaan Qazi | Software Engineer Portfolio">
-    <meta property="og:description"
-        content="Explore the portfolio of Ehsaan ur Rehman – Software Engineering student, web developer, and problem-solver.">
-    <meta property="og:image" content="https://ehsaan-qazi.github.io/portfolio/images/preview.png">
-    <meta property="og:url" content="https://ehsaan-qazi.github.io/portfolio/">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ehsaan Qazi | Software Engineer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Mohammad Ehsaan ur Rehman Qazi - Software Engineering student at COMSATS University Islamabad, skilled in web development and software engineering.">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ehsaan Qazi | Software Engineer Portfolio">
-    <meta name="twitter:description"
-        content="Portfolio of Mohammad Ehsaan ur Rehman Qazi (Ehsaan Qazi), Software Engineering student at COMSATS University Islamabad. Skilled in Front end development, web development, Prompt Engineering, Search Engine Optimizartion (SEO), E-commerence and Software Engineering">
-    <meta name="twitter:image" content="https://ehsaan-qazi.github.io/portfolio/images/preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,500;0,600;0,800;1,500;1,600;1,800&display=swap"
+    rel="stylesheet">
 
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
-    <div class="portfolio-wrapper">
-        <!-- Header -->
-        <header class="header-container">
-            <div class="header-left">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M24 .76 47.24 24 24 47.24.76 24 24 .76ZM21 35.76V12.24L9.24 24 21 35.76Z"
-                            fill="currentColor" />
-                    </svg>
-                </div>
-                <h1 class="header-title">Ehsaan's Portfolio</h1>
-            </div>
 
-            <nav class="desktop-nav">
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#volunteer-experience">Experience</a>
-                <a href="#certificates">Certificates</a>
-                <a href="#contact">Contact</a>
-            </nav>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__brand">
+        <img src="assets/images/EQ-Logo.png" alt="EQ Logo" class="header__logo" onerror="this.style.display='none'">
+        <span>Ehsaan Qazi</span>
+      </div>
 
-            <div class="header-right">
-                <button id="menu-button" class="mobile-menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="4" x2="20" y1="12" y2="12" />
-                        <line x1="4" x2="20" y1="6" y2="6" />
-                        <line x1="4" x2="20" y1="18" y2="18" />
-                    </svg>
-                </button>
-                <div class="profile-avatar"></div>
-            </div>
-        </header>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+      </nav>
 
-        <!-- Mobile Navigation Overlay -->
-        <div id="mobile-nav-overlay" class="mobile-nav-overlay">
-            <div class="mobile-nav-sidebar">
-                <button id="close-menu-button" class="mobile-nav-close-button">&times;</button>
-                <nav class="mobile-nav-links">
-                    <a href="#about" class="mobile-nav-link">About</a>
-                    <a href="#skills" class="mobile-nav-link">Skills</a>
-                    <a href="#projects" class="mobile-nav-link">Projects</a>
-                    <a href="#volunteer-experience" class="mobile-nav-link">Experience</a>
-                    <a href="#certificates" class="mobile-nav-link">Certificates</a>
-                    <a href="#education" class="mobile-nav-link">Education</a>
-                    <a href="#contact" class="mobile-nav-link">Contact</a>
-                </nav>
-            </div>
-        </div>
+      <button class="header__hamburger" aria-label="Toggle mobile navigation" aria-expanded="false">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <div class="hero-image"></div>
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h2 class="hero-title">Future Software Engineer</h2>
-                        <p class="hero-description">
-                            I am a Software Engineering student driven by a passion for building impactful digital
-                            solutions and embracing emerging technologies. Skilled in modern programming languages and
-                            tools, I bring creativity, precision, and a problem-solving mindset to every project I work
-                            on.
-                        </p>
-                        <!--
-                        <div class="hero-button-container">
-                            <a href="#" class="resume-button">Download Resume</a>
-                        </div>
-                        -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="section">
-                <h3 class="section-heading">About Me</h3>
-                <p class="about-paragraph">
-                    I’m Mohammad Ehsaan ur Rehman Qazi, a Software Engineering student at COMSATS University Islamabad
-                    who builds user-focused, reliable software by applying strong engineering principles and thoughtful
-                    design. I prioritize clean, maintainable code, effective collaboration, and clear communication so
-                    solutions scale and solve real problems and I stay adaptable, continually learning new languages,
-                    frameworks, and workflows as needed. Comfortable across the development lifecycle, I enjoy turning
-                    ideas into polished products and contributing to multidisciplinary teams that ship meaningful work.
-                </p>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="section">
-                <h3 class="section-heading">Education</h3>
-                <ol class="timeline">
-                    <li class="timeline-item">
-                        <span class="timeline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"
-                                fill="currentColor">
-                                <path
-                                    d="M188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z" />
-                            </svg>
-                        </span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">BS Software Engineering - Comsats University Islamabad</h4>
-                            <p class="timeline-period">Sep 2024 – Present</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <span class="timeline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"
-                                fill="currentColor">
-                                <path
-                                    d="M188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z" />
-                            </svg>
-                        </span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">ICS - Fazaia Inter College</h4>
-                            <p class="timeline-period">2022 – 2024 | Grade: A+</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <span class="timeline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"
-                                fill="currentColor">
-                                <path
-                                    d="M188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z" />
-                            </svg>
-                        </span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Matriculation - Unique Education System</h4>
-                            <p class="timeline-period">2020 – 2022 | Grade: A+</p>
-                        </div>
-                    </li>
-                </ol>
-
-                <h3 id="volunteer-experience" class="section-heading" style="margin-top: 40px;">Volunteer Experience & Activities</h3>
-                <ol class="timeline">
-                    <li class="timeline-item">
-                        <span class="timeline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"
-                                fill="currentColor">
-                                <path
-                                    d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM176,24H80A16,16,0,0,0,64,40V64H48A16,16,0,0,0,32,80v96a16,16,0,0,0,16,16H64v24a16,16,0,0,0,16,16h96a16,16,0,0,0,16-16V192h16a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H192V40A16,16,0,0,0,176,24ZM80,40h96V64H80ZM48,80H208v96H48Zm144,136H80V192h96Z" />
-                            </svg>
-                        </span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Ambassador for Bano Qabil Program</h4>
-                            <p class="timeline-period" style="margin-bottom: 8px;">Alkhidmat Foundation, COMSATS
-                                University Islamabad, Pakistan | September 2025 – Present</p>
-                            <ul
-                                style="list-style-type: disc; list-style-position: inside; color: #64748b; font-size: 14px; margin-top: 8px;">
-                                <li>Organized front desk operations and managed participant flow</li>
-                                <li>Guided students in enrolling for free IT courses under the Bano Qabil initiative
-                                </li>
-                                <li>Coordinated event logistics and ensured smooth execution</li>
-                                <li>Recognized with a certificate of participation</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <span class="timeline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"
-                                fill="currentColor">
-                                <path
-                                    d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM176,24H80A16,16,0,0,0,64,40V64H48A16,16,0,0,0,32,80v96a16,16,0,0,0,16,16H64v24a16,16,0,0,0,16,16h96a16,16,0,0,0,16-16V192h16a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H192V40A16,16,0,0,0,176,24ZM80,40h96V64H80ZM48,80H208v96H48Zm144,136H80V192h96Z" />
-                            </svg>
-                        </span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Digital Youth Summit 2025 — Participant</h4>
-                            <p class="timeline-period" style="margin-bottom: 8px;">Islamabad, Pakistan | 22 June 2025
-                            </p>
-                            <ul
-                                style="list-style-type: disc; list-style-position: inside; color: #64748b; font-size: 14px; margin-top: 8px;">
-                                <li>Attended workshops and sessions on digital innovation and technology trends</li>
-                                <li>Engaged with industry experts and peers to explore emerging digital solutions</li>
-                                <li>Gained insights into digital transformation, youth leadership, and tech-driven
-                                    community initiatives</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ol>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h3 class="section-heading">Skills</h3>
-                <div class="skills-grid">
-                    <!-- Programming Languages -->
-                    <div class="skill-card">
-                        <h4 class="skill-card-title">Programming Languages</h4>
-                        <ul class="skill-list">
-                            <li>Java</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>Python</li>
-                            <li>C++</li>
-                            <li>Html</li>
-                            <li>CSS</li>
-                        </ul>
-                    </div>
-
-                    <!-- Tools and Technologies -->
-                    <div class="skill-card">
-                        <h4 class="skill-card-title">Tools and Technologies</h4>
-                        <ul class="skill-list">
-                            <li>Git</li>
-                            <li>GitHub</li>
-                            <li>VS Code</li>
-                            <li>Stitch</li>
-                            <li>Cursor</li>
-                            <li>Claude</li>
-                            <li>Electron</li>
-                            <li>Node.js</li>
-                            <li>Express.js</li>
-                            <li>Bootstrap</li>
-                            <li>SQLite</li>
-                            <li>MySQL</li>
-                        </ul>
-                    </div>
-
-                    <!-- Domains -->
-                    <div class="skill-card">
-                        <h4 class="skill-card-title">Domains</h4>
-                        <ul class="skill-list">
-                            <li>Web Development (Frontend & Backend)</li>
-                            <li>Software Testing</li>
-                            <li>Software Quality Assurance</li>
-                            <li>UI/UX Design</li>
-                            <li>Software Development</li>
-                        </ul>
-                    </div>
-
-                    <!-- Soft Skills -->
-                    <div class="skill-card">
-                        <h4 class="skill-card-title">Soft Skills</h4>
-                        <ul class="skill-list">
-                            <li>Problem-solving</li>
-                            <li>Teamwork & Collaboration</li>
-                            <li>Communication</li>
-                            <li>Adaptability</li>
-                            <li>Leadership</li>
-                        </ul>
-                    </div>
-
-                    <!-- Other Technical Skills -->
-                    <div class="skill-card skill-card-wide">
-                        <h4 class="skill-card-title">Other Technical Skills</h4>
-                        <ul class="skill-list">
-                            <li>Microsoft 365</li>
-                            <li>Prompting</li>
-                            <li>Agile Methodologies</li>
-                            <li>Presentation Design</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section">
-                <h3 class="section-heading">Projects</h3>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-info">
-                            <p class="project-label">Featured Project</p>
-                            <h4 class="project-title">AquaTrack - Smart Fish Market Inventory & Sales Platform</h4>
-                            <p class="project-description">A desktop application engineered with Electron framework for
-                                comprehensive fish market operations management. Fully scalable, self-contained solution
-                                delivering enterprise-level functionality for inventory control, customer relationship
-                                management, transaction processing, and business analytics. Compatible with Windows.</p>
-                        </div>
-                        <div class="project-image project-image-3"></div>
-                        <div class="project-links">
-                            <button id="view-aquatrack-btn" class="project-link">View</button>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-info">
-                            <p class="project-label">Featured Project</p>
-                            <h4 class="project-title">UniGo</h4>
-                            <p class="project-description">UniGo is a web app that helps users quickly find available
-                                transport routes and estimated travel times between university campuses and city
-                                landmarks in Islamabad.</p>
-                        </div>
-                        <div class="project-image project-image-1"></div>
-                        <div class="project-links">
-                            <a href="https://ehsaan-qazi.github.io/UniGo-A-Transport-Finder/" class="project-link">Live
-                                Demo</a>
-                            <a href="https://github.com/ehsaan-qazi/UniGo-A-Transport-Finder"
-                                class="project-link project-link-secondary">Source Code</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-info">
-                            <p class="project-label">Featured Project</p>
-                            <h4 class="project-title">Tic Tak Toe</h4>
-                            <p class="project-description">A web-based Tic-Tac-Toe game built with HTML, CSS, and
-                                JavaScript that lets two players alternate marking Xs and Os on a 3×3 grid,
-                                automatically detects wins or draws, and supports quick game resets.</p>
-                        </div>
-                        <div class="project-image project-image-2"></div>
-                        <div class="project-links">
-                            <a href="https://ehsaan-qazi.github.io/Tic-Tak-Toe/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/ehsaan-qazi/Tic-Tak-Toe"
-                                class="project-link project-link-secondary">Source Code</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Experience Section 
-            <section id="experience" class="section">
-                <h3 class="section-heading">Experience</h3>
-                <ol class="timeline">
-                    <li class="timeline-item">
-                        <span class="timeline-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor">
-                                <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56Z"/>
-                            </svg>
-                        </span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Senior Developer — Tech Solutions Inc.</h4>
-                            <p class="timeline-period">2018 – Present</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <span class="timeline-icon"></span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Software Engineer — Innovate Systems</h4>
-                            <p class="timeline-period">2015 – 2018</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <span class="timeline-icon"></span>
-                        <div class="timeline-content">
-                            <h4 class="timeline-title">Junior Developer — Startup Co.</h4>
-                            <p class="timeline-period">2013 – 2015</p>
-                        </div>
-                    </li>
-                </ol>
-            </section>
-            -->
-
-            <!-- Certificates Section -->
-            <section id="certificates" class="section">
-                <h3 class="section-heading">Certificates</h3>
-                <div class="certificates-grid">
-                    <!-- Certificate Card 1 -->
-                    <article class="certificate-card">
-                        <div class="certificate-image-container">
-                            <div class="certificate-badge">VERIFIED</div>
-                            <div class="certificate-placeholder-image certificate-image-1"></div>
-                        </div>
-                        <div class="certificate-content">
-                            <div class="certificate-info">
-                                <h4 class="certificate-title">Google Prompting Essentials</h4>
-                                <p class="certificate-issuer">Google via Coursera • <span class="certificate-year"> Jun
-                                        16, 2025</span></p>
-                                <p class="certificate-description"> completed four courses, developed by Google,
-                                    featuring hands-on practice designed to build AI prompting skils. They are competent
-                                    in designing effective prompts and applying advanced prompting techniques to
-                                    complete complex tasks, analyze data, and summarize information</p>
-                            </div>
-                            <div class="certificate-footer">
-                                <a href="https://coursera.org/verify/specialization/SX47AAUCINTC"
-                                    class="certificate-link">View Credential →</a>
-                            </div>
-                        </div>
-                        <div class="certificate-stripe"></div>
-                    </article>
-
-                    <!-- Certificate Card 2 -->
-                    <article class="certificate-card">
-                        <div class="certificate-image-container">
-                            <div class="certificate-badge">VERIFIED</div>
-                            <div class="certificate-placeholder-image certificate-image-2" id="cert-image-2"></div>
-                        </div>
-                        <div class="certificate-content">
-                            <div class="certificate-info">
-                                <h4 class="certificate-title"> Introduction to Software Engineering</h4>
-                                <p class="certificate-issuer">IBM via Coursera • <span class="certificate-year"> Mar 12,
-                                        2025</span></p>
-                                <p class="certificate-description"> An introductory course covering the fundamentals of
-                                    software engineering, including development methodologies, project lifecycle, and
-                                    industry best practices.</p>
-                            </div>
-                            <div class="certificate-footer">
-                                <a href="https://coursera.org/verify/SYFWW4EEO7VL" class="certificate-link">View
-                                    Credential →</a>
-                            </div>
-                        </div>
-                        <div class="certificate-stripe"></div>
-                    </article>
-                    <!-- Certificate Card 3 -->
-                    <article class="certificate-card">
-                        <div class="certificate-image-container">
-                            <div class="certificate-badge">VERIFIED</div>
-                            <div class="certificate-placeholder-image certificate-image-2" id="cert-image-3"></div>
-                        </div>
-                        <div class="certificate-content">
-                            <div class="certificate-info">
-                                <h4 class="certificate-title"> Work Smarter with Microsoft PowerPoint</h4>
-                                <p class="certificate-issuer">Microsoft via Coursera • <span
-                                        class="certificate-year">Feb 2, 2025</span></p>
-                                <p class="certificate-description">Completed with honors the 'Work Smarter with
-                                    Microsoft PowerPoint' course by Microsoft on Coursera, gaining advanced presentation
-                                    and productivity skills.</p>
-                            </div>
-                            <div class="certificate-footer">
-                                <a href="https://coursera.org/verify/KRC28GBYQ91A" class="certificate-link">View
-                                    Credential →</a>
-                            </div>
-                        </div>
-                        <div class="certificate-stripe"></div>
-                    </article>
-                    <!-- Certificate Card 4-->
-                    <article class="certificate-card">
-                        <div class="certificate-image-container">
-                            <div class="certificate-badge">VERIFIED</div>
-                            <div class="certificate-placeholder-image certificate-image-2" id="cert-image-4"></div>
-                        </div>
-                        <div class="certificate-content">
-                            <div class="certificate-info">
-                                <h4 class="certificate-title"> Programming for Everybody (Getting Started with Python)
-                                </h4>
-                                <p class="certificate-issuer">University of Michigan via Coursera • <span
-                                        class="certificate-year">Jan 1, 2025</span></p>
-                                <p class="certificate-description"> An introductory course covering the fundamentals of
-                                    software engineering, including development methodologies, project lifecycle, and
-                                    industry best practices.</p>
-                            </div>
-                            <div class="certificate-footer">
-                                <a href="https://coursera.org/verify/SYFWW4EEO7VL" class="certificate-link">View
-                                    Credential →</a>
-                            </div>
-                        </div>
-                        <div class="certificate-stripe"></div>
-                    </article>
-
-                    <!-- Certificate Card 5-->
-                    <article class="certificate-card">
-                        <div class="certificate-image-container">
-                            <div class="certificate-badge">VERIFIED</div>
-                            <div class="certificate-placeholder-image certificate-image-2" id="cert-image-5"></div>
-                        </div>
-                        <div class="certificate-content">
-                            <div class="certificate-info">
-                                <h4 class="certificate-title"> Introduction to HTML, CSS, & JavaScript</h4>
-                                <p class="certificate-issuer">IBM via Coursera • <span class="certificate-year">May 27,
-                                        2025</span></p>
-                                <p class="certificate-description"> Gained foundational skills in creating and styling
-                                    web pages with HTML & CSS, and adding interactivity using JavaScript.</p>
-                            </div>
-                            <div class="certificate-footer">
-                                <a href="https://coursera.org/verify/SEEHS6SUM1E7" class="certificate-link">View
-                                    Credential →</a>
-                            </div>
-                        </div>
-                        <div class="certificate-stripe"></div>
-                    </article>
-
-                    <!-- Certificate Card 6-->
-                    <article class="certificate-card">
-                        <div class="certificate-image-container">
-                            <div class="certificate-badge">VERIFIED</div>
-                            <div class="certificate-placeholder-image certificate-image-2" id="cert-image-6"></div>
-                        </div>
-                        <div class="certificate-content">
-                            <div class="certificate-info">
-                                <h4 class="certificate-title"> Getting Started with Git and GitHub</h4>
-                                <p class="certificate-issuer">IBM via Coursera • <span class="certificate-year">May 20,
-                                        2025</span></p>
-                                <p class="certificate-description"> Learned the fundamentals of Git and GitHub,
-                                    including version control, repositories, branching, and collaboration workflows.</p>
-                            </div>
-                            <div class="certificate-footer">
-                                <a href="https://coursera.org/verify/0W5BB366XGRF" class="certificate-link">View
-                                    Credential →</a>
-                            </div>
-                        </div>
-                        <div class="certificate-stripe"></div>
-                    </article>
-                </div>
+      <nav class="header__contact-link">
+        <a href="contact.html">Contact Us</a>
+      </nav>
     </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" aria-hidden="true">
+    <div class="mobile-nav-sidebar">
+      <button class="mobile-nav-close-button" aria-label="Close navigation">&times;</button>
+      <nav class="mobile-nav-links" aria-label="Mobile navigation">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#certificates" class="mobile-nav-link">Certificates</a>
+        <a href="contact.html" class="mobile-nav-link mobile-nav-link--cta">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__left">
+          <div class="hero__tag">Reify Your Ideas</div>
+          <h1 class="hero__heading">
+            <span class="hero__heading-line">Engineering</span>
+            <span class="hero__heading-line">Scalable</span>
+            <span class="hero__heading-line">Solutions</span>
+          </h1>
+        </div>
+        <div class="hero__right">
+          <p class="hero__description">
+            Engineered for performance. Designed for scale. I merge strong engineering principles with modern frameworks
+            to deliver seamless Desktop (Electron.js) and Web (MERN) experiences. From the high-performance
+            infrastructure
+            of AquaTrack to the algorithmic intelligence of UniGo, I build systems grounded in Data Structures and
+            Algorithmic Rigor.
+          </p>
+        </div>
+      </div>
+      <!-- Floating CTA at hero/body intersection -->
+      <a href="contact.html" class="hero__intersection-cta" aria-label="Let's Collaborate">
+        Let's Collaborate
+      </a>
     </section>
 
-
-
-    <!-- Contact Section 
-            <section id="contact" class="section contact-section">
-                <h3 class="section-heading">Contact</h3>
-                <form class="contact-form">
-                    <label class="form-label">
-                        <span class="form-label-text">Name</span>
-                        <input class="form-input" placeholder="Your Name" />
-                    </label>
-                    <label class="form-label">
-                        <span class="form-label-text">Email</span>
-                        <input class="form-input" placeholder="Your Email" />
-                    </label>
-                    <label class="form-label form-label-wide">
-                        <span class="form-label-text">Message</span>
-                        <textarea class="form-input form-textarea" placeholder="Your Message"></textarea>
-                    </label>
-                    <div class="form-button-container">
-                        <button class="submit-button">Send Message</button>
-                    </div>
-                </form>
-            </section>
-            -->
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer-social-links">
-            <a href="https://x.com/M_Ehsaan_Qazi?t=UxXOMEwcxeZFG60n8D8t3A&s=09" class="footer-link">X/Twitter</a>
-            <a href="https://www.linkedin.com/in/ehsaanqazi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                class="footer-link">LinkedIn</a>
-            <a href="https://github.com/ehsaan-qazi" class="footer-link">GitHub</a>
-            <a href="https://www.instagram.com/ehsaan.qazi?igsh=MXZsZTF4NDRueHZiOQ==" class="footer-link">Instagram</a>
+    <section id="about" class="about">
+      <div class="about__container">
+        <div class="about__left">
+          <h2 class="about__heading">About Me</h2>
         </div>
-        <p class="footer-copyright">© Ehsaan's Portfolio</p>
-    </footer>
-    </div>
+        <div class="about__right">
+          <p class="about__text">
+            I'm <span class="about__brand">Mohammad Ehsaan ur Rehman Qazi</span>, a Software Engineer focused on
+            translating specific business requirements into high-performance digital products. I engineer purpose-built
+            software that fits your specific business workflow, eliminating the bottlenecks in your daily
+            operations.<br>
 
-    <!-- Carousel Modal -->
-    <div id="carousel-modal" class="carousel-modal">
-        <button class="carousel-close" id="carousel-close">&times;</button>
-        <div class="carousel-container">
-            <button class="carousel-nav carousel-prev" id="carousel-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            <img id="carousel-image" src="" alt="AquaTrack Screenshot" class="carousel-image">
-            <button class="carousel-nav carousel-next" id="carousel-next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
-            <div class="carousel-counter" id="carousel-counter"></div>
+            My development approach merges the architectural precision of C++, Java, and Python with the modern agility
+            of Electron.js and the MERN Stack. This ensures that every custom solution I architect—whether for desktop
+            or web—is scalable, secure, and engineered for long-term reliability.<br>
+
+            This commitment to bespoke quality defines my work. From the specialized inventory management of <span
+              class="about__brand"><a href="#projects">AquaTrack</a></span> to the algorithmic routing of <span
+              class="about__brand"><a href="#projects">UniGo</a></span>, I deliver tailored software ecosystems that fit
+            the exact needs of the problem at hand.
+          </p>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="services">
+      <div class="container">
+        <div class="section-tag">My Services</div>
+        <h2 class="section-heading">What I Can Do For You</h2>
+
+        <div class="grid grid-3">
+
+          <article class="service-card" data-service="Web Development">
+            <div class="service-card__icon" aria-hidden="true"><img src="assets/images/web-dev.png"
+                alt="Web Development icon"></div>
+            <h3 class="service-card__title">Web Development</h3>
+            <p class="service-card__description">
+              Create responsive, performant web applications with modern frameworks and best practices for exceptional
+              user experiences.
+            </p>
+          </article>
+
+          <article class="service-card" data-service="SEO (AEO + GEO)">
+            <div class="service-card__icon" aria-hidden="true"><img src="assets/images/seo.png" alt="SEO icon"></div>
+            <h3 class="service-card__title">SEO (AEO + GEO)</h3>
+            <p class="service-card__description">
+              Optimize your website for search engines with Answer Engine Optimization (AEO) and Generative Engine
+              Optimization (GEO) to increase visibility and drive organic traffic.
+            </p>
+          </article>
+
+          <article class="service-card" data-service="App Development">
+            <div class="service-card__icon" aria-hidden="true"><img src="assets/images/web-dev.png"
+                alt="App Development icon"></div>
+            <h3 class="service-card__title">App Development</h3>
+            <p class="service-card__description">
+              Build powerful cross-platform mobile and desktop applications using modern technologies with native-like
+              performance and seamless user experience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-tag">My Skills</div>
+        <h2 class="section-heading">Technical Expertise</h2>
+
+        <div class="grid grid-4">
+          <article class="skill-card">
+            <h3 class="skill-card__title">Programming Languages</h3>
+            <ul class="skill-card__list">
+              <li class="skill-card__item">Java</li>
+              <li class="skill-card__item">JavaScript (ES6+)</li>
+              <li class="skill-card__item">Python</li>
+              <li class="skill-card__item">C++</li>
+              <li class="skill-card__item">HTML</li>
+              <li class="skill-card__item">CSS</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3 class="skill-card__title">Tools & Technologies</h3>
+            <ul class="skill-card__list">
+              <li class="skill-card__item">Git & GitHub</li>
+              <li class="skill-card__item">VS Code</li>
+              <li class="skill-card__item">Electron</li>
+              <li class="skill-card__item">Node.js</li>
+              <li class="skill-card__item">Express.js</li>
+              <li class="skill-card__item">Bootstrap</li>
+              <li class="skill-card__item">SQLite</li>
+              <li class="skill-card__item">MySQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3 class="skill-card__title">Domains</h3>
+            <ul class="skill-card__list">
+              <li class="skill-card__item">Web Development</li>
+              <li class="skill-card__item">Software Testing</li>
+              <li class="skill-card__item">Quality Assurance</li>
+              <li class="skill-card__item">UI/UX Design</li>
+              <li class="skill-card__item">Software Development</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3 class="skill-card__title">Soft Skills</h3>
+            <ul class="skill-card__list">
+              <li class="skill-card__item">Problem-solving</li>
+              <li class="skill-card__item">Teamwork</li>
+              <li class="skill-card__item">Communication</li>
+              <li class="skill-card__item">Adaptability</li>
+              <li class="skill-card__item">Leadership</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-tag">Featured Work</div>
+        <h2 class="section-heading">Technical Projects</h2>
+
+        <div class="grid grid-2">
+          <article class="project-card">
+            <div class="project-card__image">
+              <img src="assets/images/Dashboard.png"
+                alt="AquaTrack Dashboard showcasing fish market management interface" loading="lazy">
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__label">Featured Project</div>
+              <h3 class="project-card__title">AquaTrack</h3>
+              <p class="project-card__description">
+                A desktop application engineered with Electron framework for comprehensive fish market operations
+                management. Fully scalable, self-contained solution delivering enterprise-level functionality for
+                inventory control, customer relationship management, transaction processing, and business analytics.
+              </p>
+              <div class="project-card__tags">
+                <span class="project-card__tag">Electron</span>
+                <span class="project-card__tag">Node.js</span>
+                <span class="project-card__tag">SQLite</span>
+                <span class="project-card__tag">Bootstrap</span>
+              </div>
+              <div class="project-card__links">
+                <button type="button" class="project-card__link" data-gallery="aquatrack"
+                  aria-label="Open AquaTrack gallery">Open</button>
+                <a href="https://github.com/ehsaan-qazi/AquaTrack"
+                  class="project-card__link project-card__link--secondary" target="_blank" rel="noopener noreferrer"
+                  aria-label="View AquaTrack source code on GitHub">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image">
+              <img src="assets/images/pic.png" alt="UniGo transport finder application interface" loading="lazy">
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__label">Featured Project</div>
+              <h3 class="project-card__title">UniGo</h3>
+              <p class="project-card__description">
+                UniGo is a web app that helps users quickly find available transport routes and estimated travel times
+                between university campuses and city landmarks in Islamabad.
+              </p>
+              <div class="project-card__tags">
+                <span class="project-card__tag">HTML</span>
+                <span class="project-card__tag">CSS</span>
+                <span class="project-card__tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://ehsaan-qazi.github.io/UniGo-A-Transport-Finder/" class="project-card__link"
+                  target="_blank" rel="noopener noreferrer" aria-label="View UniGo live demo">Live Demo</a>
+                <a href="https://github.com/ehsaan-qazi/UniGo-A-Transport-Finder"
+                  class="project-card__link project-card__link--secondary" target="_blank" rel="noopener noreferrer"
+                  aria-label="View UniGo source code on GitHub">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__image">
+              <img src="assets/images/tictactoe.png" alt="Tic Tac Toe game interface" loading="lazy">
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__label">Featured Project</div>
+              <h3 class="project-card__title">Tic Tac Toe</h3>
+              <p class="project-card__description">
+                A web-based Tic-Tac-Toe game built with HTML, CSS, and JavaScript that lets two players alternate
+                marking Xs and Os on a 3×3 grid, automatically detects wins or draws, and supports quick game resets.
+              </p>
+              <div class="project-card__tags">
+                <span class="project-card__tag">HTML</span>
+                <span class="project-card__tag">CSS</span>
+                <span class="project-card__tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://ehsaan-qazi.github.io/Tic-Tak-Toe/" class="project-card__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="Play Tic Tac Toe game">Live
+                  Demo</a>
+                <a href="https://github.com/ehsaan-qazi/Tic-Tak-Toe"
+                  class="project-card__link project-card__link--secondary" target="_blank" rel="noopener noreferrer"
+                  aria-label="View Tic Tac Toe source code on GitHub">Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container container-narrow">
+        <div class="section-tag">Education</div>
+        <h2 class="section-heading">Academic Journey</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3 class="timeline-title">BS Software Engineering</h3>
+            <p class="timeline-period">COMSATS University Islamabad | Sep 2024 – Present</p>
+            <p class="timeline-description">
+              Currently pursuing Bachelor of Science in Software Engineering, focusing on modern software development
+              practices, algorithms, data structures, and software architecture. Actively engaged in academic projects
+              and collaborative learning environments.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="timeline-title">Intermediate in Computer Science (ICS)</h3>
+            <p class="timeline-period">Fazaia Inter College | 2022 – 2024 | Grade: A+</p>
+            <p class="timeline-description">
+              Completed Intermediate studies with distinction, building strong foundations in computer science
+              fundamentals, mathematics, and physics. Developed early programming skills and analytical thinking
+              capabilities.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="timeline-title">Matriculation (Secondary School Certificate)</h3>
+            <p class="timeline-period">Unique Education System | 2020 – 2022 | Grade: A+</p>
+            <p class="timeline-description">
+              Achieved excellent academic performance in matriculation with focus on science subjects. Developed core
+              problem-solving abilities and interest in technology that laid the groundwork for future pursuits in
+              software engineering.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container container-narrow">
+        <div class="section-tag">Experience & Activities</div>
+        <h2 class="section-heading">Volunteer Experience</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3 class="timeline-title">Ambassador for Bano Qabil Program</h3>
+            <p class="timeline-period">Alkhidmat Foundation, COMSATS University Islamabad | September 2025 – Present</p>
+            <p class="timeline-description">
+              Organized front desk operations and managed participant flow. Guided students in enrolling for free IT
+              courses under the Bano Qabil initiative. Coordinated event logistics and ensured smooth execution.
+              Recognized with a certificate of participation.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="timeline-title">Digital Youth Summit 2025 — Participant</h3>
+            <p class="timeline-period">Islamabad, Pakistan | 22 June 2025</p>
+            <p class="timeline-description">
+              Attended workshops and sessions on digital innovation and technology trends. Engaged with industry experts
+              and peers to explore emerging digital solutions. Gained insights into digital transformation, youth
+              leadership, and tech-driven community initiatives.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <div class="container">
+        <div class="section-tag">Certifications</div>
+        <h2 class="section-heading">Professional Certificates</h2>
+
+        <div class="grid grid-3">
+          <article class="certificate-card">
+            <div class="certificate-card__image">
+              <img src="assets/images/prompting.png" alt="Google Prompting Essentials Certificate" loading="lazy">
+            </div>
+            <div class="certificate-card__content">
+              <h3 class="certificate-card__title">Google Prompting Essentials</h3>
+              <p class="certificate-card__issuer">Google via Coursera • Jun 16, 2025</p>
+              <a href="https://coursera.org/verify/specialization/SX47AAUCINTC" class="certificate-card__link"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="View Google Prompting Essentials credential on Coursera">View Credential →</a>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <div class="certificate-card__image">
+              <img src="assets/images/software.png" alt="Introduction to Software Engineering Certificate"
+                loading="lazy">
+            </div>
+            <div class="certificate-card__content">
+              <h3 class="certificate-card__title">Introduction to Software Engineering</h3>
+              <p class="certificate-card__issuer">IBM via Coursera • Mar 12, 2025</p>
+              <a href="https://coursera.org/verify/SYFWW4EEO7VL" class="certificate-card__link" target="_blank"
+                rel="noopener noreferrer" aria-label="View Software Engineering credential on Coursera">View
+                Credential →</a>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <div class="certificate-card__image">
+              <img src="assets/images/ms.png" alt="Work Smarter with Microsoft PowerPoint Certificate" loading="lazy">
+            </div>
+            <div class="certificate-card__content">
+              <h3 class="certificate-card__title">Work Smarter with Microsoft PowerPoint</h3>
+              <p class="certificate-card__issuer">Microsoft via Coursera • Feb 2, 2025</p>
+              <a href="https://coursera.org/verify/KRC28GBYQ91A" class="certificate-card__link" target="_blank"
+                rel="noopener noreferrer" aria-label="View Microsoft PowerPoint credential on Coursera">View
+                Credential →</a>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <div class="certificate-card__image">
+              <img src="assets/images/python.png"
+                alt="Programming for Everybody - Getting Started with Python Certificate" loading="lazy">
+            </div>
+            <div class="certificate-card__content">
+              <h3 class="certificate-card__title">Programming for Everybody (Getting Started with Python)</h3>
+              <p class="certificate-card__issuer">University of Michigan • Jan 1, 2025</p>
+              <a href="https://coursera.org/verify/SYFWW4EEO7VL" class="certificate-card__link" target="_blank"
+                rel="noopener noreferrer" aria-label="View Python programming credential on Coursera">View
+                Credential →</a>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <div class="certificate-card__image">
+              <img src="assets/images/html.png" alt="Introduction to HTML, CSS, and JavaScript Certificate"
+                loading="lazy">
+            </div>
+            <div class="certificate-card__content">
+              <h3 class="certificate-card__title">Introduction to HTML, CSS, & JavaScript</h3>
+              <p class="certificate-card__issuer">IBM via Coursera • May 27, 2025</p>
+              <a href="https://coursera.org/verify/SEEHS6SUM1E7" class="certificate-card__link" target="_blank"
+                rel="noopener noreferrer" aria-label="View HTML CSS JavaScript credential on Coursera">View
+                Credential →</a>
+            </div>
+          </article>
+
+          <article class="certificate-card">
+            <div class="certificate-card__image">
+              <img src="assets/images/git.png" alt="Getting Started with Git and GitHub Certificate" loading="lazy">
+            </div>
+            <div class="certificate-card__content">
+              <h3 class="certificate-card__title">Getting Started with Git and GitHub</h3>
+              <p class="certificate-card__issuer">IBM via Coursera • May 20, 2025</p>
+              <a href="https://coursera.org/verify/0W5BB366XGRF" class="certificate-card__link" target="_blank"
+                rel="noopener noreferrer" aria-label="View Git and GitHub credential on Coursera">View
+                Credential →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__contact">
+          <h3 class="footer__contact-title">Say Hello</h3>
+          <a href="mailto:ehsaanbusinesshandle@gmail.com" class="footer__contact-email"
+            aria-label="Send email to Ehsaan Qazi">ehsaanbusinesshandle@gmail.com</a>
+          <p class="footer__contact-location">COMSATS University Islamabad, Islamabad</p>
+        </div>
+
+        <div class="footer__social">
+          <h3 class="footer__social-title">Social Links</h3>
+          <div class="footer__social-grid">
+            <a href="https://www.instagram.com/ehsaan.qazi" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Visit Ehsaan Qazi on Instagram">Instagram</a>
+            <a href="https://github.com/ehsaan-qazi" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Visit Ehsaan Qazi on GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/ehsaanqazi" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Visit Ehsaan Qazi on LinkedIn">LinkedIn</a>
+            <a href="https://x.com/M_Ehsaan_Qazi?t=UxXOMEwcxeZFG60n8D8t3A&s=09" class="footer__social-link"
+              target="_blank" rel="noopener noreferrer" aria-label="Visit Ehsaan Qazi on X (Twitter)">X/Twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer__copyright">© 2026 Ehsaan Qazi. All rights reserved.</p>
+
+      <button class="footer__chat-button" aria-label="Contact via email">
+        <img src="assets/images/envelope.png" alt="Contact" width="24" height="24">
+      </button>
+    </div>
+  </footer>
+
+  <div class="modal" data-modal role="dialog" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-backdrop></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Close modal">&times;</button>
+      <div class="modal__icon" aria-hidden="true">🚀</div>
+      <h2 class="modal__title" id="modal-title" data-modal-title>Service Name</h2>
+      <p class="modal__text">Coming soon! This service will be available shortly. Stay tuned for updates.</p>
+    </div>
+  </div>
+
+  <!-- Project Gallery Modal -->
+  <div class="gallery" id="gallery" role="dialog" aria-label="Project gallery" aria-modal="true" aria-hidden="true">
+    <div class="gallery__backdrop"></div>
+    <button class="gallery__close" aria-label="Close gallery">&times;</button>
+    <div class="gallery__container">
+      <button class="gallery__nav gallery__nav--prev" aria-label="Previous image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="gallery__viewport">
+        <div class="gallery__track" id="gallery-track">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+      <button class="gallery__nav gallery__nav--next" aria-label="Next image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 6 15 12 9 18"></polyline>
+        </svg>
+      </button>
+    </div>
+    <div class="gallery__dots" id="gallery-dots"></div>
+    <div class="gallery__counter">
+      <span id="gallery-current">1</span> / <span id="gallery-total">5</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

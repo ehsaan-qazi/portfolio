@@ -4,15 +4,23 @@
   <!-- Main Portfolio -->
   <url>
     <loc>https://ehsaan-qazi.github.io/portfolio/</loc>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://ehsaan-qazi.github.io/portfolio/contact.html</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Project 1: UniGo -->
   <url>
     <loc>https://ehsaan-qazi.github.io/UniGo-A-Transport-Finder/</loc>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,7 +28,14 @@
   <!-- Project 2: Tic Tac Toe -->
   <url>
     <loc>https://ehsaan-qazi.github.io/Tic-Tak-Toe/</loc>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Project 3: AquaTrack -->
+  <url>
+    <loc>https://github.com/ehsaan-qazi/inventory-management-system-</loc>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

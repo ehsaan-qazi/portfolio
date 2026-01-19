@@ -1,0 +1,71 @@
+:root {
+    /* Base theme colors - Dark by default (body is always dark) */
+    --color-bg: #0D0E10;
+    --color-bg-light: #171717;
+    --color-text: #ffffff;
+    --color-text-secondary: rgba(255, 255, 255, 0.7);
+    --color-accent: #6E43FB;
+    --color-accent-hover: #8B5EFF;
+    --color-border: #1E1E1E;
+
+    /* Light section colors (for hero and light islands like projects/certificates) */
+    --color-light-bg: #EFEFEF;
+    --color-light-text: #0D0E10;
+    --color-light-text-secondary: rgba(13, 14, 16, 0.7);
+    --color-light-border: #e2e8f0;
+
+    /* Dark canvas colors */
+    --color-canvas: #0D0E10;
+    --color-canvas-light: #171717;
+    --color-canvas-deeper: #080808;
+
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Manrope', 'DM Sans', var(--font-sans);
+
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 128px;
+    --space-11: 192px;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --duration-fast: 0.2s;
+    --duration-base: 0.3s;
+    --duration-slow: 0.5s;
+    --duration-slower: 0.8s;
+
+    --container-max: 1280px;
+    --container-narrow: 960px;
+    --container-wide: 1440px;
+
+    --header-height: 80px;
+
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+}
+
+/* dark-theme class kept for backwards compatibility but no longer used */
+body.dark-theme {
+    --color-bg: #0D0E10;
+    --color-bg-light: #171717;
+    --color-text: #ffffff;
+    --color-text-secondary: rgba(255, 255, 255, 0.7);
+    --color-border: #1E1E1E;
+}

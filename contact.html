@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ehsaan Qazi</title>
+    <meta name="description" content="Get in touch with Ehsaan Qazi for SEO, Web Development, and App Development services.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap" rel="stylesheet">
+
+    <!-- Use shared stylesheets for consistency -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__backdrop"></div>
+        <div class="header__container">
+            <a href="index.html" class="header__brand">
+                <img src="assets/images/EQ-Logo.png" alt="EQ Logo" class="header__logo" onerror="this.style.display='none'">
+                <span>Ehsaan Qazi</span>
+            </a>
+            <nav class="header__nav" aria-label="Main navigation">
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <nav class="header__contact-link">
+                <a href="contact.html" class="active">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact">
+        <div class="contact-content">
+            <div class="contact-heading">
+                <span class="section-tag">Let's Connect</span>
+                <h1 class="contact-title">Ready to Hear Your Big Idea</h1>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-top">
+                        <fieldset class="contact-checkbox">
+                            <legend class="contact-checkbox-heading">Choose your need</legend>
+                            <div class="contact-checkbox-wrapper">
+                                <div class="checkbox">
+                                    <input name="needs" type="checkbox" id="seo" class="checkbox-hidden" value="SEO (AEO + GEO)">
+                                    <label for="seo" class="checkbox-label">
+                                        <span class="checkbox-label-text">SEO (AEO + GEO)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input name="needs" type="checkbox" id="web-dev" class="checkbox-hidden" value="Web Development">
+                                    <label for="web-dev" class="checkbox-label">
+                                        <span class="checkbox-label-text">Web Development</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <input name="needs" type="checkbox" id="app-dev" class="checkbox-hidden" value="App Development">
+                                    <label for="app-dev" class="checkbox-label">
+                                        <span class="checkbox-label-text">App Development</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="contact-radio">
+                            <legend class="contact-radio-heading">Project Budget (USD)</legend>
+                            <ul class="contact-radio-wrapper">
+                                <li class="contact-radio-item">
+                                    <input name="budget" type="radio" id="budget1" class="contact-radio-hidden" value="Under $1K">
+                                    <label for="budget1" class="contact-radio-label">
+                                        <span class="contact-radio-size">Under $1K</span>
+                                    </label>
+                                </li>
+                                <li class="contact-radio-item">
+                                    <input name="budget" type="radio" id="budget2" class="contact-radio-hidden" value="$1K-5K">
+                                    <label for="budget2" class="contact-radio-label">
+                                        <span class="contact-radio-size">$1K-5K</span>
+                                    </label>
+                                </li>
+                                <li class="contact-radio-item">
+                                    <input name="budget" type="radio" id="budget3" class="contact-radio-hidden" value="$5K - 10K">
+                                    <label for="budget3" class="contact-radio-label">
+                                        <span class="contact-radio-size">$5K - 10K</span>
+                                    </label>
+                                </li>
+                                <li class="contact-radio-item">
+                                    <input name="budget" type="radio" id="budget4" class="contact-radio-hidden" value="More than $10K">
+                                    <label for="budget4" class="contact-radio-label">
+                                        <span class="contact-radio-size">More than $10K</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+
+                        <div class="contact-upload">
+                            <label class="contact-upload-wrapper" for="attachment">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40" aria-hidden="true">
+                                    <path fill="currentColor" d="M20.333 28.967A4.582 4.582 0 0115.75 24.4c0-1.217.483-2.383 1.35-3.233l2.35-2.35a1.257 1.257 0 011.766 0 1.257 1.257 0 010 1.766l-2.35 2.35c-.4.4-.616.917-.616 1.467s.216 1.083.616 1.467a2.082 2.082 0 002.95 0l3.7-3.7A5.422 5.422 0 0017.85 14.5l-4.034 4.033a4.428 4.428 0 000 6.3 1.258 1.258 0 010 1.767 1.258 1.258 0 01-1.766 0 6.92 6.92 0 01-2.034-4.933c0-1.867.717-3.617 2.034-4.934l4.033-4.033c3.083-3.083 8.117-3.083 11.2 0 3.083 3.083 3.083 8.117 0 11.2l-3.7 3.7a4.517 4.517 0 01-3.25 1.367z"></path>
+                                    <path fill="currentColor" d="M20 37.917c-9.883 0-17.917-8.033-17.917-17.917 0-9.883 8.034-17.916 17.917-17.916 9.883 0 17.917 8.033 17.917 17.916 0 9.884-8.034 17.917-17.917 17.917zm0-33.333C11.5 4.584 4.583 11.5 4.583 20S11.5 35.417 20 35.417 35.417 28.5 35.417 20 28.5 4.584 20 4.584z"></path>
+                                </svg>
+                                <span class="contact-upload-desc">Add Attachment</span>
+                            </label>
+                            <input name="attachment" id="attachment" type="file" class="contact-upload-hidden" accept="application/pdf,.doc,.docx,.txt">
+                            <span class="contact-upload-filename" id="uploadFilename"></span>
+                        </div>
+                    </div>
+
+                    <div class="contact-inputs">
+                        <div class="input">
+                            <input name="name" id="name" type="text" class="input-content" placeholder=" " required autocomplete="name">
+                            <label for="name" class="input-label">Name</label>
+                        </div>
+                        <div class="input">
+                            <input name="email" id="email" type="email" class="input-content" placeholder=" " required autocomplete="email">
+                            <label for="email" class="input-label">Your Email</label>
+                        </div>
+                        <div class="input">
+                            <textarea name="description" id="description" class="input-content input-desc" placeholder=" " required></textarea>
+                            <label for="description" class="input-label">Tell Us About Your Project</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="contact-cta" aria-label="Submit contact form">
+                    <span class="contact-cta-text">Submit</span>
+                    <svg class="contact-cta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 153 38" aria-hidden="true">
+                        <path d="M3 16.5a2.5 2.5 0 000 5v-5zm148.768 4.268a2.5 2.5 0 000-3.536l-15.91-15.91a2.5 2.5 0 00-3.536 3.536L146.464 19l-14.142 14.142a2.5 2.5 0 003.536 3.536l15.91-15.91zM3 21.5h147v-5H3v5z"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="contact-footer">
+        <p class="copyright">© 2026 Ehsaan Qazi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+            document.getElementById('uploadFilename').textContent = '';
+        });
+
+        // File upload handler - show filename
+        document.getElementById('attachment').addEventListener('change', function(e) {
+            const filenameDisplay = document.getElementById('uploadFilename');
+            if (e.target.files.length > 0) {
+                filenameDisplay.textContent = e.target.files[0].name;
+            } else {
+                filenameDisplay.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

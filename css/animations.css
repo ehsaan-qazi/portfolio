@@ -1,0 +1,113 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--duration-slow) var(--ease-out),
+        transform var(--duration-slow) var(--ease-out);
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(32px);
+}
+
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-32px);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-32px);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(32px);
+}
+
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.parallax {
+    will-change: transform;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-slide-down {
+    animation: slideDown var(--duration-slow) var(--ease-out) forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp var(--duration-slow) var(--ease-out) forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn var(--duration-base) var(--ease-out) forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn var(--duration-base) var(--ease-out) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
