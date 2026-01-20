@@ -315,7 +315,95 @@ body {
     gap: var(--space-10);
   }
 }
+/* Mobile fixes for hero section */
+@media (max-width: 1023px) {
+  .hero__container {
+    padding-top: var(--header-height);
+    padding-bottom: calc(var(--space-10) + 60px); /* Extra space for CTA button */
+  }
 
+  .hero__tag {
+    margin-bottom: var(--space-4); /* Ensure tag is visible */
+  }
+
+  .hero__heading {
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__right {
+    padding-top: 0; /* Remove extra padding on mobile */
+  }
+
+  .profile_container {
+    margin-bottom: var(--space-6); /* Space between profile and description */
+  }
+
+  .hero__description {
+    margin-bottom: calc(var(--space-8) + 60px); /* Extra space to avoid CTA overlap */
+  }
+
+  /* Make profile elements more compact on mobile */
+  .profile_pic {
+    height: 25%;
+    width: 25%;
+  }
+
+  .profile_name {
+    font-size: 18px;
+  }
+
+  .profile_skill_container {
+    flex-wrap: wrap;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .profile_skill {
+    font-size: 12px;
+    padding: 0.1rem 0.4rem;
+  }
+}
+.profile_container{
+  margin-bottom: 12px;
+}
+.profile_pic{
+  height: 30%;
+  width: 30%;
+  border: 4px solid #6E43FB;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.profile_name{
+  font-family: 'Manrope', var(--font-sans);
+  color: #0D0E10;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  padding-top: 16px;
+}
+.profile_tag_line{
+  font-family: 'Manrope', var(--font-sans);
+  color: #0D0E10;
+  opacity: 0.7;
+}
+.profile_skill_container{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 8px;
+}
+.profile_skill{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-light-text);
+  display: inline-block;
+  border-radius: 9999px;
+  border: 1px solid var(--color-light-text);
+  padding: 0.15rem 0.5rem;
+}
 .hero__left {
   text-align: left;
 }
@@ -448,67 +536,71 @@ body {
     0 12px 40px rgba(110, 67, 251, 0.4);
 }
 
-/* Floating CTA at hero/body intersection */
-.hero__intersection-cta {
+.hero__intersection-cta-wrapper {
   position: absolute;
-  bottom: -28px;
+  bottom: -50px;  /* Changed from -22px (moved down ~28px) */
   right: 10%;
-  padding: 1.25rem 2.5rem;
+  z-index: 100;
+  transform: rotate(-11deg);
+  background: #0D0E10;  /* Black background */
+  border-radius: 16px;  /* Modest border radius */
+  padding: 16px;  /* Increased thickness from 12px to 16px */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__intersection-cta {
+  display: block;
+  padding: 2.75rem 3rem; 
   background: var(--color-accent);
   color: #ffffff;
   border: none;
-  border-radius: var(--radius-lg);
-  font-size: 18px;
+  border-radius: 16px;  /* Kept the same */
+  font-size: 24px;
   font-weight: 600;
   text-decoration: none;
-  z-index: 100;
-  transform: rotate(-3deg);
-  box-shadow:
-    8px 8px 0 0 #0D0E10,
-    0 8px 32px rgba(110, 67, 251, 0.5);
-  transition: all var(--duration-base) var(--ease-out);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero__intersection-cta::before {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border: 3px solid #0D0E10;
-  border-radius: calc(var(--radius-lg) + 4px);
-  pointer-events: none;
+.hero__intersection-cta-wrapper:hover {
+  transform: rotate(-11deg) translateY(-4px);  /* Fixed: kept -11deg rotation */
 }
 
 .hero__intersection-cta:hover {
   background: var(--color-accent-hover);
-  transform: rotate(-3deg) translateY(-4px);
-  box-shadow:
-    12px 12px 0 0 #0D0E10,
-    0 12px 40px rgba(110, 67, 251, 0.6);
 }
 
 @media (min-width: 1280px) {
-  .hero__intersection-cta {
-    bottom: -32px;
+  .hero__intersection-cta-wrapper {
+    bottom: -60px;  /* Changed from -32px (moved down ~28px) */
     right: 12%;
-    padding: 1.5rem 3rem;
-    font-size: 20px;
+    padding: 18px;  /* Increased thickness from 14px to 18px */
+  }
+  
+  .hero__intersection-cta {
+    padding: 1.925rem 4rem;  /* Increased ~10% height and width proportionally */
+    font-size: 26px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero__intersection-cta {
-    bottom: -24px;
+  .hero__intersection-cta-wrapper {
+    bottom: -48px;  /* Changed from -24px (moved down ~24px) */
     right: 50%;
-    transform: translateX(50%) rotate(-3deg);
-    padding: 1rem 2rem;
-    font-size: 16px;
+    transform: translateX(50%) rotate(-11deg);  /* Fixed: kept -11deg rotation */
+    padding: 14px;  /* Increased thickness from 10px to 14px */
+    border-radius: 24px;
   }
 
-  .hero__intersection-cta:hover {
-    transform: translateX(50%) rotate(-3deg) translateY(-4px);
+  .hero__intersection-cta {
+    padding: 1.375rem 2.5rem;  /* Increased ~10% height and width proportionally */
+    font-size: 18px;
+    border-radius: 18px;
+  }
+
+  .hero__intersection-cta-wrapper:hover {
+    transform: translateX(50%) rotate(-11deg) translateY(-4px);  /* Fixed: kept -11deg rotation */
   }
 }
-
 
 /* About Section - Dark background with split layout */
 .about {
