@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
-  initServiceModals();
   initSmoothScroll();
   initChatButton();
   initProjectGallery();
@@ -75,67 +74,6 @@ function initMobileMenu() {
   });
 }
 
-
-function initServiceModals() {
-  const serviceCards = document.querySelectorAll('[data-service]');
-  const modal = document.querySelector('[data-modal]');
-  const modalClose = document.querySelector('[data-modal-close]');
-  const modalBackdrop = document.querySelector('[data-modal-backdrop]');
-  const modalTitle = document.querySelector('[data-modal-title]');
-
-  if (!modal) return;
-
-  serviceCards.forEach(card => {
-    card.style.cursor = 'pointer';
-
-    card.addEventListener('click', () => {
-      const serviceName = card.dataset.service;
-      modalTitle.textContent = serviceName;
-      modal.classList.add('is-active');
-      document.body.style.overflow = 'hidden';
-
-      if (window.lenis) {
-        window.lenis.stop();
-      }
-
-      if (typeof gsap !== 'undefined') {
-        gsap.fromTo(modal.querySelector('.modal__content'),
-          { scale: 0.9, y: 20 },
-          { scale: 1, y: 0, duration: 0.3, ease: 'back.out(1.7)' }
-        );
-      }
-    });
-  });
-
-  const closeModal = () => {
-    if (typeof gsap !== 'undefined') {
-      gsap.to(modal.querySelector('.modal__content'), {
-        scale: 0.9,
-        y: 20,
-        duration: 0.2,
-        ease: 'power2.in',
-        onComplete: () => {
-          modal.classList.remove('is-active');
-          document.body.style.overflow = '';
-          if (window.lenis) window.lenis.start();
-        }
-      });
-    } else {
-      modal.classList.remove('is-active');
-      document.body.style.overflow = '';
-      if (window.lenis) window.lenis.start();
-    }
-  };
-
-  if (modalClose) modalClose.addEventListener('click', closeModal);
-  if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
-      closeModal();
-    }
-  });
-}
 
 function initChatButton() {
   const chatButton = document.querySelector('.footer__chat-button');
