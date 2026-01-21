@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function makeContentVisible() {
-    const elements = document.querySelectorAll('.service-card, .skill-card, .project-card, .certificate-card, .timeline-item');
+    const elements = document.querySelectorAll('.service-card, .skill-card, .project-card, .certificate-card, .timeline-item, .profile_container, .profile, .profile_name, .profile_tag_line, .profile_skill');
     elements.forEach(el => {
         el.style.opacity = '1';
         el.style.transform = 'none';
@@ -58,45 +58,77 @@ function initHeaderTransition() {
 function initPageIntro() {
     const tl = gsap.timeline();
 
+    // Set initial states for profile elements
+    gsap.set('.profile', { scale: 0.8, opacity: 0 });
+    gsap.set('.profile_name', { y: 20, opacity: 0 });
+    gsap.set('.profile_tag_line', { y: 20, opacity: 0 });
+    gsap.set('.profile_skill', { scale: 0.9, opacity: 0 });
+
     tl.from('.header', {
         y: -12,
         opacity: 0,
         duration: 0.6,
         ease: 'power3.out'
     })
-        .from('.hero__tag', {
-            y: 20,
-            opacity: 0,
-            duration: 0.5,
-            ease: 'power2.out'
-        }, '-=0.3')
-        .from('.hero__heading-line', {
-            y: 100,
-            opacity: 0,
-            stagger: 0.1,
-            duration: 0.8,
-            ease: 'power3.out'
-        }, '-=0.2')
-        .from('.hero__description', {
-            y: 24,
-            opacity: 0,
-            duration: 0.6,
-            ease: 'power2.out'
-        }, '-=0.4')
-        .fromTo('.hero__cta',
-            {
-                y: 20,
-                opacity: 0,
-                scale: 0.95
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.5,
-                ease: 'back.out(1.7)',
-                clearProps: 'opacity,transform'
-            }, '-=0.3');
+    .from('.hero__tag', {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+    }, '-=0.3')
+    .from('.hero__heading-line', {
+        y: 100,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power3.out'
+    }, '-=0.2')
+    // Profile picture animation - scale in with bounce
+    .to('.profile', {
+        scale: 1,
+        opacity: 1,
+        duration: 0.8,
+        ease: 'back.out(1.7)',
+        clearProps: 'transform,opacity'
+    }, '-=0.4')
+    // Profile name slides up
+    .to('.profile_name', {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+        clearProps: 'transform,opacity'
+    }, '-=0.5')
+    // Profile tagline slides up
+    .to('.profile_tag_line', {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+        clearProps: 'transform,opacity'
+    }, '-=0.4')
+    // Profile skills stagger with bounce
+    .to('.profile_skill', {
+        scale: 1,
+        opacity: 1,
+        stagger: 0.08,
+        duration: 0.4,
+        ease: 'back.out(1.5)',
+        clearProps: 'transform,opacity'
+    }, '-=0.3')
+    .from('.hero__description', {
+        y: 24,
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power2.out'
+    }, '-=0.2')
+    .from('.hero__intersection-cta-wrapper', {
+        y: 20,
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.5,
+        ease: 'back.out(1.7)'
+    }, '-=0.3');
 }
 
 
@@ -149,6 +181,88 @@ function initHoverAnimations() {
             gsap.to(card, {
                 y: 0,
                 duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+    });
+
+    // Add subtle hover animation for profile picture
+    const profilePic = document.querySelector('.profile_pic');
+    if (profilePic) {
+        profilePic.addEventListener('mouseenter', () => {
+            gsap.to(profilePic, {
+                scale: 1.05,
+                rotate: 2,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+
+        profilePic.addEventListener('mouseleave', () => {
+            gsap.to(profilePic, {
+                scale: 1,
+                rotate: 0,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+    }
+
+    // Add hover animation for skill tags
+    const skillTags = document.querySelectorAll('.profile_skill');
+    skillTags.forEach(tag => {
+        tag.addEventListener('mouseenter', () => {
+            gsap.to(tag, {
+                scale: 1.1,
+                duration: 0.2,
+                ease: 'back.out(2)'
+            });
+        });
+
+        tag.addEventListener('mouseleave', () => {
+            gsap.to(tag, {
+                scale: 1,
+                duration: 0.2,
+                ease: 'power2.out'
+            });
+        });
+    });
+
+    // hover animation for hero tag
+    const hero_tag = document.querySelectorAll('.hero__tag');
+    hero_tag.forEach(tag => {
+        tag.addEventListener('mouseenter', () => {
+            gsap.to(tag, {
+                scale: 1.1,
+                duration: 0.2,
+                ease: 'back.out(2)'
+            });
+        });
+
+        tag.addEventListener('mouseleave', () => {
+            gsap.to(tag, {
+                scale: 1,
+                duration: 0.2,
+                ease: 'power2.out'
+            });
+        });
+    });
+
+    // hover animation for project card tag
+    const project_skills = document.querySelectorAll('.project-card__tag');
+    project_skills.forEach(tag => {
+        tag.addEventListener('mouseenter', () => {
+            gsap.to(tag, {
+                scale: 1.1,
+                duration: 0.2,
+                ease: 'back.out(2)'
+            });
+        });
+
+        tag.addEventListener('mouseleave', () => {
+            gsap.to(tag, {
+                scale: 1,
+                duration: 0.2,
                 ease: 'power2.out'
             });
         });

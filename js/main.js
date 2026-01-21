@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSmoothScroll();
   initChatButton();
+  initHeaderTheme(); 
   initProjectGallery();
 });
 
@@ -109,26 +110,25 @@ function initSmoothScroll() {
 function initHeaderTheme() {
   const header = document.querySelector('.header');
   const hero = document.querySelector('.hero');
-
   if (!header || !hero) return;
 
-  // Set initial state
-  header.classList.add('light-header');
-
-  // Toggle header theme based on scroll position
-  const toggleHeaderTheme = () => {
+  const updateHeader = () => {
+    const scroll = window.scrollY;
     const heroBottom = hero.offsetHeight;
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition < heroBottom - 100) {
-      header.classList.add('light-header');
+    
+    header.classList.remove('header--transparent', 'header--light', 'header--dark');
+    
+    if (scroll < 80) {
+      header.classList.add('header--transparent');
+    } else if (scroll < heroBottom - 100) {
+      header.classList.add('header--light');
     } else {
-      header.classList.remove('light-header');
+      header.classList.add('header--dark');
     }
   };
 
-  window.addEventListener('scroll', toggleHeaderTheme);
-  toggleHeaderTheme(); // Call once on init
+  window.addEventListener('scroll', updateHeader);
+  updateHeader();
 }
 
 // =========================================

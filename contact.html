@@ -20,7 +20,7 @@
         <div class="header__backdrop"></div>
         <div class="header__container">
             <a href="index.html" class="header__brand">
-                <img src="assets/images/EQ-Logo.png" alt="EQ Logo" class="header__logo" onerror="this.style.display='none'">
+                <img src="assets/images/ChatGPT Image Jan 21, 2026, 03_11_57 PM.png" alt="EQ Logo" class="header__logo" onerror="this.style.display='none'">
                 <span>Ehsaan Qazi</span>
             </a>
             <nav class="header__nav" aria-label="Main navigation">
@@ -31,7 +31,7 @@
                 <a href="index.html#contact">Contact</a>
             </nav>
             <nav class="header__contact-link">
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="active">Contact Me</a>
             </nav>
         </div>
     </header>
@@ -161,6 +161,22 @@
                 filenameDisplay.textContent = '';
             }
         });
+    </script>
+    <script>
+        const header = document.querySelector('.header');
+        
+        const updateHeader = () => {
+            if (window.scrollY < 80) {
+                header.classList.remove('header--light');
+                header.classList.add('header--transparent');
+            } else {
+                header.classList.remove('header--transparent');
+                header.classList.add('header--light');
+            }
+        };
+        
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
     </script>
 </body>
 </html>

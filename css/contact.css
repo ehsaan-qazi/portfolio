@@ -23,14 +23,26 @@ body {
    Header - Contact Page Specific (Light Theme)
    ========================================================================== */
 
-.header {
+   .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     height: var(--header-height);
-    transition: all var(--duration-slow) var(--ease-out);
+    transition: all 0.4s ease;
+}
+
+.header--transparent {
+    background: transparent;
+}
+
+.header--transparent .header__backdrop {
+    opacity: 0;
+}
+
+.header--light .header__backdrop {
+    opacity: 1;
 }
 
 .header__backdrop {
