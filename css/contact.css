@@ -23,7 +23,7 @@ body {
    Header - Contact Page Specific (Light Theme)
    ========================================================================== */
 
-   .header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -130,7 +130,7 @@ body {
 }
 
 .contact-content {
-    padding-top: var(--space-9);
+    padding-top: var(--space-5);
     color: var(--color-text);
 }
 
