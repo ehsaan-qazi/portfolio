@@ -3,7 +3,6 @@ body {
     background-color: #0D0E10;
     color: #ffffff;
     overflow-x: hidden;
-    overscroll-behavior-y: none;
 }
 
 .container {
